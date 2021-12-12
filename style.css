@@ -20,22 +20,28 @@ p img {
 }
 #average {
     width: auto;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 20px;
+    color: #020621;
 }
 #timer {
-    float: left;
-   margin-left: 8%;
+   float: left;
+   margin-left: 5%;
    font-size: 20px;
-   font-weight: bold;
-   width: 22%;
+   font-weight: lighter;
+   width: 20%;
+   color: #323ca8;
 }
 #wpm {
    float: right;
-   margin-right: 5%;
+   border: 1px solid #d15f38;
+   padding: 10px;
+   border-radius: 10%;
+   margin-right: 10px;
    font-size: 20px;
-   font-weight: bold;
-   width: 10%;
+   font-weight: lighter;
+   /* width: 10%; */
+   color: #323ca8;
 }
 #container {
   border: 1px solid black;
@@ -44,4 +50,20 @@ p img {
   width: 80%;
   margin-left: 5%;
   padding: 5%;
+  font-size: 20px;
+}
+h2{
+    color: #11268f;
+}
+#sad {
+    display: none;
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+}
+#happy {
+    display: none;
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
 }

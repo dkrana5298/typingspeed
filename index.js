@@ -31,7 +31,7 @@ function startTimer(){
     if(second > 9){
         document.getElementById('timer').innerHTML=second + " sec..";
     }
-   if(second===10){
+   if(second===60){
        document.getElementById('average').innerHTML=
        "your speed there: ";
        right.style.display= "block";

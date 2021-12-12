@@ -1,5 +1,8 @@
 var container=document.getElementById('container');
 var right=document.getElementById('right');
+var sad=document.getElementById('sad');
+var happy=document.getElementById('happy');
+// var count=0;
 function countChars(container,wpm){
     var text=document.getElementById('container').value;
     var word=text.split(" ");
@@ -12,8 +15,15 @@ function countChars(container,wpm){
           count +=1;
        }
     }
-    document.getElementById('wpm').innerHTML=count;
-    // console.log(count)
+    document.getElementById('wpm').innerHTML=count - 1 ;
+    if((count-1) < 1 ){
+        sad.style.display= "block";
+        
+    }
+    else {
+        happy.style.display= "block";
+        sad.style.display= "none";
+    }
  }
  
  var interval;
@@ -26,25 +36,18 @@ function countChars(container,wpm){
 function startTimer(){
     second++;
     if(second < 10){
-        document.getElementById('timer').innerHTML="0" + second + " sec..";
+        document.getElementById('timer').innerHTML="0" + second + " sec";
     }
     if(second > 9){
-        document.getElementById('timer').innerHTML=second + " sec..";
+        document.getElementById('timer').innerHTML=second + " sec";
     }
-   if(second===60){
+   if(second===5){
        document.getElementById('average').innerHTML=
-       "your speed there: ";
+       "your speed there:";
        right.style.display= "block";
        right.style.display= "inline";
-     container.style.display= "none";
-     clearInterval(interval)
+       container.style.display= "none";
+       clearInterval(interval)
      
    }
 }
-// var counter=countChars();
-// var secondcount=startTimer();
-// console.log(count)
-//  var average;
-//  var time=second/60;
-//   average=((count)/5)/timer;
-//   document.getElementById('average').innerHTML=average;
